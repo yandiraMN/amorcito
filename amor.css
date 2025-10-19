@@ -1,0 +1,152 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.poema-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 105, 180, 0.3);
+}
+
+h1 {
+    color: #d63384;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+#contador {
+    font-size: 1.3em;
+    color: #8b0051;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.estrofa p {
+    color: #8b0051;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 8px 0;
+    font-style: italic;
+}
+
+.firma p {
+    color: #d63384;
+    font-size: 1.3em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.fecha {
+    color: #ff1493 !important;
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.fecha:hover {
+    color: #d63384 !important;
+    transform: scale(1.1);
+}
+
+#sorpresa {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff5ca2;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s;
+}
+#sorpresa:hover {
+    background: #e44c90;
+    transform: scale(1.1);
+}
+
+.galeria {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.galeria img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+.decorative-square {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0.4;
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
+}
+.decorative-square:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.decorative-square:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
+.decorative-square:nth-child(3) { bottom: 20%; left: 15%; animation-delay: 4s; }
+.decorative-square:nth-child(4) { bottom: 10%; right: 5%; animation-delay: 1s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fondo.jpg');
+    background-size: 150px 150px;
+    background-repeat: repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+    z-index: -1;
+    animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0% { background-position: 0 0; }
+    50% { background-position: 150px 150px; }
+    100% { background-position: 0 0; }
+}
+@media (max-width: 600px) {
+    .poema-container {
+        padding: 30px;
+        margin: 10px;
+    }
+    h1 { font-size: 2em; }
+    .estrofa p { font-size: 1.1em; }
+    .galeria img { width: 150px; }
+}
