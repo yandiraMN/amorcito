@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Te amo más cada día que pasa. Este año es solo el comienzo de nuestra historia eterna juntos. ❤️');
     });
 });
-
 function crearCorazonesFlotantes() {
     const container = document.body;
     const elements = ['❤️', '⭐', '🌸'];
@@ -33,7 +32,6 @@ function crearCorazonesFlotantes() {
         setTimeout(() => element.remove(), 8000);
     }, Math.random() * 1000 + 1500);
 }
-
 function animarEstrofas() {
     const estrofas = document.querySelectorAll('.estrofa');
     estrofas.forEach((estrofa, index) => {
