@@ -48,13 +48,6 @@ function animarEstrofas() {
     });
 }
 
-function contadorAmor() {
-    const inicio = new Date("2024-10-19"); 
-    const hoy = new Date();
-    const diff = hoy - inicio;
-    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-    document.getElementById("contador").textContent = `Llevamos ${dias} días juntos! 💖`;
-}
 
 function escribirTitulo() {
     const titulo = document.querySelector('h1');
